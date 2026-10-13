@@ -47,6 +47,8 @@ uses
   HlpSipHash128,
   HlpXXHash64,
   HlpXXHash3,
+  HlpRapidHash,
+  HlpFoldHash,
   // Hash128 Units //
   HlpMurmurHash3_x86_128,
   HlpMurmurHash3_x64_128,
@@ -238,6 +240,13 @@ type
       class function CreateXXHash64(): IHashWithKey; static;
 
       class function CreateXXHash3(): IHashWithKey; static;
+
+      class function CreateRapidHash(): IHashWithKey; static;
+      class function CreateRapidHashMicro(): IHashWithKey; static;
+      class function CreateRapidHashNano(): IHashWithKey; static;
+
+      class function CreateFoldHash(): IHashWithKey; static;
+      class function CreateFoldHashQuality(): IHashWithKey; static;
 
     end;
 
@@ -879,6 +888,31 @@ end;
 class function THashFactory.THash64.CreateXXHash3: IHashWithKey;
 begin
   Result := TXXHash3.Create();
+end;
+
+class function THashFactory.THash64.CreateRapidHash: IHashWithKey;
+begin
+  Result := TRapidHash.Create();
+end;
+
+class function THashFactory.THash64.CreateRapidHashMicro: IHashWithKey;
+begin
+  Result := TRapidHashMicro.Create();
+end;
+
+class function THashFactory.THash64.CreateRapidHashNano: IHashWithKey;
+begin
+  Result := TRapidHashNano.Create();
+end;
+
+class function THashFactory.THash64.CreateFoldHash: IHashWithKey;
+begin
+  Result := TFoldHash.Create();
+end;
+
+class function THashFactory.THash64.CreateFoldHashQuality: IHashWithKey;
+begin
+  Result := TFoldHashQuality.Create();
 end;
 
 { THashFactory.THash128 }

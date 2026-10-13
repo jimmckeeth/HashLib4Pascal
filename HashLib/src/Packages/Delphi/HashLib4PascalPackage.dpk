@@ -140,6 +140,8 @@ contains
   HlpXXHash3X86Backend in '..\..\Simd\Backend\HlpXXHash3X86Backend.pas',
   HlpXXHash3ArmBackend in '..\..\Simd\Backend\HlpXXHash3ArmBackend.pas',
   HlpXXHash3 in '..\..\Hash64\HlpXXHash3.pas',
+  HlpRapidHash in '..\..\Hash64\HlpRapidHash.pas',
+  HlpFoldHash in '..\..\Hash64\HlpFoldHash.pas',
   HlpMurmurHash3_x86_128 in '..\..\Hash128\HlpMurmurHash3_x86_128.pas',
   HlpMurmurHash3_x64_128 in '..\..\Hash128\HlpMurmurHash3_x64_128.pas',
   HlpSipHash128 in '..\..\Hash128\HlpSipHash128.pas',

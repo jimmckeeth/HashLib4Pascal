@@ -184,6 +184,19 @@ type
     /// Returns the number of bits set to 1.
     /// </summary>
     class function PopCount64(AValue: UInt64): Int32; static;
+
+    /// <summary>
+    /// Computes the full 128-bit product of two 64-bit values, returning the
+    /// low and high 64-bit halves in ALow and AHigh.
+    /// </summary>
+    class procedure Multiply64To128(AX, AY: UInt64; out ALow, AHigh: UInt64);
+      static; inline;
+
+    /// <summary>
+    /// Computes the 128-bit product of two 64-bit values and returns the
+    /// xor of its low and high 64-bit halves ("folded multiply").
+    /// </summary>
+    class function FoldedMultiply64(AX, AY: UInt64): UInt64; static; inline;
   end;
 
 implementation
@@ -628,6 +641,29 @@ begin
   AValue := AValue and UInt64($7F);
   Result := Int32(AValue);
 {$ENDIF FPC}
+end;
+
+class procedure TBitOperations.Multiply64To128(AX, AY: UInt64;
+  out ALow, AHigh: UInt64);
+var
+  LLoLo, LHiLo, LLoHi, LHiHi, LCross: UInt64;
+begin
+  LLoLo := UInt64(UInt32(AX)) * UInt64(UInt32(AY));
+  LHiLo := UInt64(UInt32(AX shr 32)) * UInt64(UInt32(AY));
+  LLoHi := UInt64(UInt32(AX)) * UInt64(UInt32(AY shr 32));
+  LHiHi := UInt64(UInt32(AX shr 32)) * UInt64(UInt32(AY shr 32));
+
+  LCross := (LLoLo shr 32) + (LHiLo and $FFFFFFFF) + LLoHi;
+  AHigh := (LHiLo shr 32) + (LCross shr 32) + LHiHi;
+  ALow := (LCross shl 32) or (LLoLo and $FFFFFFFF);
+end;
+
+class function TBitOperations.FoldedMultiply64(AX, AY: UInt64): UInt64;
+var
+  LLow, LHigh: UInt64;
+begin
+  Multiply64To128(AX, AY, LLow, LHigh);
+  Result := LLow xor LHigh;
 end;
 
 end.

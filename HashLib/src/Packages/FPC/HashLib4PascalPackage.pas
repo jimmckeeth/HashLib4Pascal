@@ -40,7 +40,8 @@ uses
   HlpBlake3ArmBackend, HlpXXHash3X86Backend, HlpXXHash3ArmBackend, 
   HlpAdler32X86Backend, HlpAdler32ArmBackend, HlpArgon2X86Backend, 
   HlpArgon2ArmBackend, HlpScryptX86Backend, HlpScryptArmBackend, HlpCRCSimd, 
-  HlpCRCX86Backend, HlpCRCArmBackend, HlpHashLibExceptions;
+  HlpCRCX86Backend, HlpCRCArmBackend, HlpHashLibExceptions, HlpRapidHash, 
+  HlpFoldHash;
 
 implementation
 

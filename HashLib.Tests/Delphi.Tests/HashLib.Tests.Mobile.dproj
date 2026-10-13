@@ -455,6 +455,8 @@
         <DCCReference Include="..\..\HashLib\src\Simd\Backend\HlpXXHash3X86Backend.pas"/>
         <DCCReference Include="..\..\HashLib\src\Simd\Backend\HlpXXHash3ArmBackend.pas"/>
         <DCCReference Include="..\..\HashLib\src\Hash64\HlpXXHash3.pas"/>
+        <DCCReference Include="..\..\HashLib\src\Hash64\HlpRapidHash.pas"/>
+        <DCCReference Include="..\..\HashLib\src\Hash64\HlpFoldHash.pas"/>
         <DCCReference Include="..\..\HashLib\src\Hash128\HlpMurmurHash3_x86_128.pas"/>
         <DCCReference Include="..\..\HashLib\src\Hash128\HlpMurmurHash3_x64_128.pas"/>
         <DCCReference Include="..\..\HashLib\src\Hash128\HlpSipHash128.pas"/>

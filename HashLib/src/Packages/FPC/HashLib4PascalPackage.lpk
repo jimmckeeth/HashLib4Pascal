@@ -29,7 +29,7 @@
 "/>
     <License Value="MIT License"/>
     <Version Major="4" Minor="3"/>
-    <Files Count="146">
+    <Files Count="148">
       <Item1>
         <Filename Value="..\..\Base\HlpHash.pas"/>
         <UnitName Value="HlpHash"/>
@@ -614,6 +614,14 @@
         <Filename Value="..\..\Misc\HlpHashLibExceptions.pas"/>
         <UnitName Value="HlpHashLibExceptions"/>
       </Item146>
+      <Item147>
+        <Filename Value="..\..\Hash64\HlpRapidHash.pas"/>
+        <UnitName Value="HlpRapidHash"/>
+      </Item147>
+      <Item148>
+        <Filename Value="..\..\Hash64\HlpFoldHash.pas"/>
+        <UnitName Value="HlpFoldHash"/>
+      </Item148>
     </Files>
     <CompatibilityMode Value="True"/>
     <LazDoc PackageName="(default)"/>

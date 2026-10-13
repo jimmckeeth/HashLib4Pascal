@@ -147,6 +147,8 @@ begin
   Bench(THashFactory.THash64.CreateSipHash2_4, 'SipHash-2-4');
   Bench(THashFactory.THash64.CreateXXHash64, 'XXHash64');
   Bench(THashFactory.THash64.CreateXXHash3, 'XXHash3');
+  Bench(THashFactory.THash64.CreateRapidHash, 'RapidHash');
+  Bench(THashFactory.THash64.CreateFoldHash, 'FoldHash');
   Bench(THashFactory.THash128.CreateMurmurHash3_x86_128,
     'MurmurHash3-x86-128');
   Bench(THashFactory.THash128.CreateMurmurHash3_x64_128,

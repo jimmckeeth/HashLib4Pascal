@@ -115,6 +115,8 @@ uses
   HlpXXHash3X86Backend in '..\..\HashLib\src\Simd\Backend\HlpXXHash3X86Backend.pas',
   HlpXXHash3ArmBackend in '..\..\HashLib\src\Simd\Backend\HlpXXHash3ArmBackend.pas',
   HlpXXHash3 in '..\..\HashLib\src\Hash64\HlpXXHash3.pas',
+  HlpRapidHash in '..\..\HashLib\src\Hash64\HlpRapidHash.pas',
+  HlpFoldHash in '..\..\HashLib\src\Hash64\HlpFoldHash.pas',
   HlpMurmurHash3_x86_128 in '..\..\HashLib\src\Hash128\HlpMurmurHash3_x86_128.pas',
   HlpMurmurHash3_x64_128 in '..\..\HashLib\src\Hash128\HlpMurmurHash3_x64_128.pas',
   HlpSipHash128 in '..\..\HashLib\src\Hash128\HlpSipHash128.pas',
